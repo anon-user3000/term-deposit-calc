@@ -21,25 +21,25 @@ describe("Testing main app", () => {
 		});
 	});
 
-	test("compounding, bad start deposit input", () => {
+	test("bad start deposit input", () => {
 		termDepositBadStartDeposit.forEach((termDeposit) => {
 			expect(app(termDeposit)).toBeFalsy;
 		});
 	});
 
-	test("compounding, bad interest rate input", () => {
+	test("bad interest rate input", () => {
 		termDepositBadInterestRate.forEach((termDeposit) => {
 			expect(app(termDeposit)).toBeFalsy;
 		});
 	});
 
-	test("compounding, bad investment term input", () => {
+	test("bad investment term input", () => {
 		termDepositBadInvestmentTerm.forEach((termDeposit) => {
 			expect(app(termDeposit)).toBeFalsy;
 		});
 	});
 
-	test("compounding, bad interest paid input", () => {
+	test("bad interest paid input", () => {
 		termDepositBadInterestPaid.forEach((termDeposit) => {
 			expect(app(termDeposit)).toBeFalsy;
 		});
