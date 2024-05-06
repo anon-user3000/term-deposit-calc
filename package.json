@@ -1,0 +1,16 @@
+{
+	"name": "term-deposit-calc",
+	"version": "0.0.1",
+	"description": "CLI for term deposit calculation",
+	"main": "app.js",
+	"scripts": {
+		"test": "jest",
+		"testwatch": "jest --watchAll"
+	},
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"jest": "^29.7.0",
+		"@types/jest": "^29.5.12"
+	}
+}
