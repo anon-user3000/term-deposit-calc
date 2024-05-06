@@ -1,4 +1,5 @@
 const { calculateTermDeposit } = require("./scripts/calculateInterest");
+const { validateTermDepositInput } = require("./scripts/validateInput");
 
 const termDepositInput = {
 	startDeposit: 10000,
@@ -9,8 +10,13 @@ const termDepositInput = {
 };
 
 const app = (input) => {
-	const finalBalance = parseFloat(calculateTermDeposit(input).toFixed(2));
-	console.log("Final Balance:", finalBalance);
+	let finalBalance = null;
+	if (validateTermDepositInput(input)) {
+		finalBalance = parseFloat(calculateTermDeposit(input).toFixed(2));
+		console.log("Final Balance:", finalBalance);
+	} else {
+		return false;
+	}
 
 	return finalBalance;
 };

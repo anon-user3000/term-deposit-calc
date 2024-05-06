@@ -14,6 +14,4 @@ CLI for informational term deposit calculation
 -   Result will be rounded only when shown to the user.
 
 ## TODO:
-
--   Constants enum
 -   Input validation
