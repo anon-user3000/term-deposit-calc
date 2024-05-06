@@ -21,6 +21,22 @@ node app.js
 
 6. Change parameters of `termDepositInput` in app.js to change results
 
+```
+ * @description Term Deposit calculation is run on termDepositInput object. Change its values to change the result.
+ *
+ * @param {number} startDeposit - Currency in dollars
+ * @param {number} interestRate - Annual interest rate in decimal percentage (ex: 0.01 is equivalent to 1%)
+ * @param {number} investmentTerm - Duration of investment in decimal years
+ * @param {string} interestPaid - Choose from "Monthly", "Quarterly", "Annually", "At Maturity"
+ */
+const termDepositInput = {
+	startDeposit: 10000,
+	interestRate: 0.011,
+	investmentTerm: 3,
+	interestPaid: "Monthly",
+};
+```
+
 ## Tests:
 
 Run tests with:
