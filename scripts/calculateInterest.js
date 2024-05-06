@@ -1,5 +1,6 @@
 const { InvestmentTermsEnum } = require("./constants/investmentTerms.enum");
 const { findObjectByKeyValue } = require("./searchHelper");
+const { validateTermDepositInput } = require("./validateInput");
 
 // Source for calculation is https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
 const calculateTermDeposit = ({
@@ -14,6 +15,8 @@ const calculateTermDeposit = ({
 		investmentTerm,
 		interestPaid,
 	};
+
+	if (!validateTermDepositInput(termDeposit)) return false;
 
 	let interestPaidTerm = null;
 	if (interestPaid === "At Maturity") {
