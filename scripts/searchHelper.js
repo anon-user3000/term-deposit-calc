@@ -13,7 +13,7 @@ const findObjectByKeyValue = (objects, searchTerm, err) => {
 		}
 	}
 	if (err) {
-		console.error();
+		console.error(err);
 	}
 	return false;
 };

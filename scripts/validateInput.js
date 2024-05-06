@@ -11,7 +11,11 @@ const validateTermDepositInput = ({
 		isValidNumberInput("Start Deposit", startDeposit, 100, 10000000) &&
 		isValidNumberInput("Interest Rate", interestRate, 0.001, 0.2) &&
 		isValidNumberInput("Investment Term", investmentTerm, 0.25, 10) &&
-		findObjectByKeyValue(InvestmentTermsEnum, interestPaid)
+		findObjectByKeyValue(
+			InvestmentTermsEnum,
+			interestPaid,
+			`Interest paid must be 'Monthly', 'Quarterly', 'Annually' or 'At Maturity`
+		)
 	) {
 		return true;
 	} else {
@@ -19,7 +23,7 @@ const validateTermDepositInput = ({
 	}
 };
 
-const isValidNumberInput = (name, input, min, max, err) => {
+const isValidNumberInput = (name, input, min, max) => {
 	if (input !== null && input !== undefined) {
 		if (isNumber(input, `${name} must be a number.`)) {
 			if (min && max) {
