@@ -10,4 +10,10 @@ CLI for informational term deposit calculation
 ## Design Decisions:
 
 -   All time will be in decimal years.
+-   All percentages will be decimal percentages (ex: 0.01 instead of 1%)
 -   Result will be rounded only when shown to the user.
+
+## TODO:
+
+-   Constants enum
+-   Input validation

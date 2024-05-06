@@ -1,3 +1,6 @@
+const { InvestmentTermsEnum } = require("./constants/investmentTerms.enum");
+const { findObjectByKeyValue } = require("./searchHelper");
+
 // Source for calculation is https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
 const calculateTermDeposit = ({
 	startDeposit,
@@ -5,8 +8,6 @@ const calculateTermDeposit = ({
 	investmentTerm,
 	interestPaid,
 }) => {
-	let interestPaidTerm = null;
-
 	const termDeposit = {
 		startDeposit,
 		interestRate,
@@ -14,14 +15,14 @@ const calculateTermDeposit = ({
 		interestPaid,
 	};
 
+	let interestPaidTerm = null;
 	if (interestPaid === "At Maturity") {
 		return calculateSimpleInterest(termDeposit);
-	} else if (interestPaid === "Monthly") {
-		interestPaidTerm = 12;
-	} else if (interestPaid === "Quarterly") {
-		interestPaidTerm = 4;
-	} else if (interestPaid === "Annually") {
-		interestPaidTerm = 1;
+	} else {
+		interestPaidTerm = findObjectByKeyValue(
+			InvestmentTermsEnum,
+			interestPaid
+		);
 	}
 
 	return calculateCompoundInterest({

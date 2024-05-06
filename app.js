@@ -4,11 +4,15 @@ const termDepositInput = {
 	startDeposit: 10000,
 	interestRate: 0.011,
 	investmentTerm: 3,
-	interestPaid: "At Maturity",
+	interestPaid: "Monthly",
+	// interestPaid: "At Maturity",
 };
 
 const app = (input) => {
-	return parseFloat(calculateTermDeposit(input).toFixed(2));
+	const finalBalance = parseFloat(calculateTermDeposit(input).toFixed(2));
+	console.log("Final Balance:", finalBalance);
+
+	return finalBalance;
 };
 
 app(termDepositInput);
