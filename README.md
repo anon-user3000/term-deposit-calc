@@ -60,3 +60,9 @@ npm test
 -   All time will be in decimal years.
 -   All percentages will be decimal percentages (ex: 0.01 instead of 1%)
 -   Result will be rounded only when shown to the user.
+
+## Tradeoffs:
+
+-   Tradeoffs due to running out of time:
+    -   All .js files in scripts folder are untested (opted to "integration test" the main application instead)
+    -   Can't currently accept input from cmd line
