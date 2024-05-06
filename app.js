@@ -9,7 +9,7 @@ const { validateTermDepositInput } = require("./scripts/validateInput");
  * @param {number} investmentTerm - Duration of investment in decimal years
  * @param {string} interestPaid - Choose from "Monthly", "Quarterly", "Annually", "At Maturity"
  */
-const termDepositInput = {
+const termDepositInput = { 
 	startDeposit: 10000,
 	interestRate: 0.011,
 	investmentTerm: 3,
