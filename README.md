@@ -5,7 +5,7 @@ CLI for informational term deposit calculation
 ## How to run:
 
 1. Clone this git repository
-2. Install node if you dont have it
+2. Install node v20 if you dont have it — [guide]<https://nodejs.org/en/learn/getting-started/how-to-install-nodejs>.
 3. cd to folder
 4. Install dependencies:
 
