@@ -84,6 +84,8 @@ App.js is the entry point and can be run from the cmd line. It validates input, 
     -   Impact: Input is simplified as we don't have to parse out "%" or perform conversion from percentage to decimal percentage, though this likely makes the application more confusing for the end user.
 -   Result will be rounded only when shown to the user.
     -   Impact: calculation logic output can be trusted for other informational output (ex. calculating the sum of two term deposit accounts)
+-   Errors use console.error() so that they print for the user without additional trace information and make input errors more obvious
+    -   Impact: Errors aren't thrown with trace info which makes development harder. Would ideally solve for both in future.
 
 ## Tradeoffs:
 
