@@ -46,7 +46,7 @@ const calculateCompoundInterest = ({
 	);
 };
 
-// Source for calculation: https://www.calculatorsoup.com/calculators/financial/simple-interest-calculator.php
+// Source for calculation: https://www.calculatorsoup.com/calculators/financial/simple-interest-plus-principal-calculator.php
 const calculateSimpleInterest = ({
 	startDeposit,
 	interestRate,
