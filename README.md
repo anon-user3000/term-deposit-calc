@@ -1,6 +1,7 @@
 # term-deposit-calc
 
-CLI for informational term deposit calculation
+CLI for informational term deposit calculation.
+Based on the algorithm found at [Compound Interest Calculator](https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php) from calculatorsoup.com.
 
 ## How to run:
 
@@ -49,6 +50,13 @@ npm test
 
 -   Nodejs v20
 -   Macbook Air M1
+
+## Dependencies
+
+Dev dependencies:
+
+-   `jest` – testing framework
+-   `@types/jest` - for test type autocomplete
 
 ## How it works:
 
