@@ -2,7 +2,6 @@ const { InvestmentTermsEnum } = require("./constants/investmentTerms.enum");
 const { findObjectByKeyValue } = require("./searchHelper");
 const { validateTermDepositInput } = require("./validateInput");
 
-// Source for calculation is https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
 const calculateTermDeposit = ({
 	startDeposit,
 	interestRate,
@@ -34,6 +33,7 @@ const calculateTermDeposit = ({
 	});
 };
 
+// Source for calculation https://www.calculatorsoup.com/calculators/financial/compound-interest-calculator.php
 const calculateCompoundInterest = ({
 	startDeposit,
 	interestRate,
@@ -46,6 +46,7 @@ const calculateCompoundInterest = ({
 	);
 };
 
+// Source for calculation: https://www.calculatorsoup.com/calculators/financial/simple-interest-calculator.php
 const calculateSimpleInterest = ({
 	startDeposit,
 	interestRate,
